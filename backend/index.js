@@ -16,7 +16,7 @@ const PORT = process.env.PORT;
 app.use(express.json());
 app.use(
   cors({
-    origin: "*",
+    origin: "https://mr-incredible.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
