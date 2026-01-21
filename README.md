@@ -162,7 +162,7 @@ ISC
 
 ## 👤 Author
 
-**Sawan**
+**Kedar Sawant**
 
 ## 🙏 Acknowledgments
 
