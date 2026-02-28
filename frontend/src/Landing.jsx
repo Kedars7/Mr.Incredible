@@ -67,7 +67,7 @@ const Landing = () => {
           </h1>
         </div>
         <a
-          href="https://github.com"
+          href="https://github.com/Kedars7/Mr.Incredible"
           target="_blank"
           rel="noopener noreferrer"
           className="text-white hover:text-blue-400 transition-colors duration-200 hover:scale-110 transform"
