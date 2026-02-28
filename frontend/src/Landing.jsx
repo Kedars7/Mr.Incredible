@@ -135,7 +135,7 @@ const Landing = () => {
                 setTextarea("Enter Your GitHub Username");
                 setUsername("");
               }}
-              className="mt-3 sm:mt-4 px-4 sm:px-6 py-2.5 sm:py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105 text-sm sm:text-base"
+              className="mt-3 sm:mt-4 px-4 sm:px-6 py-2.5 cursor-pointer sm:py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105 text-sm sm:text-base"
             >
               Try Another
             </button>
