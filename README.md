@@ -1,4 +1,5 @@
-# Mr. Incredible 🎭
+# Mr. Incredible
+Link:- https://mr-incredible.vercel.app/
 
 A fun web application that roasts GitHub users using AI! Enter a GitHub username and watch Mr. Incredible deliver savage, hilarious roasts powered by Google's Gemini AI.
 
@@ -161,7 +162,7 @@ ISC
 
 ## 👤 Author
 
-**Sawan**
+**Kedar Sawant**
 
 ## 🙏 Acknowledgments
 
