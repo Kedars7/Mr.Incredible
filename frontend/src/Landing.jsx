@@ -53,16 +53,16 @@ const Landing = () => {
     }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-x-hidden">
+    <div className="h-screen w-screen overflow-x-hidden overflow-y-auto bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 fixed inset-0">
         <Boxes />
-      <nav className="relative z-30 flex justify-between items-center px-4 sm:px-6 md:px-8 py-3 md:py-4 bg-slate-900/50 backdrop-blur-sm border-b border-slate-700/50">
+      <nav className="relative z-30 flex justify-between items-center px-3 sm:px-6 md:px-8 py-3 md:py-4 bg-slate-900/50 backdrop-blur-sm border-b border-slate-700/50">
         <div className="flex items-center gap-2 sm:gap-3">
           <img 
             src={mrIncredile} 
             alt="Logo" 
-            className="w-10 h-10 sm:w-12 sm:h-12 shadow-lg" 
+            className="w-9 h-9 sm:w-12 sm:h-12 shadow-lg" 
           />
-          <h1 className="font-mono text-base sm:text-lg md:text-xl font-bold text-white tracking-tight">
+          <h1 className="font-mono text-sm sm:text-lg md:text-xl font-bold text-white tracking-tight">
             Mr. Incredible
           </h1>
         </div>
@@ -77,35 +77,35 @@ const Landing = () => {
         </a>
       </nav>
 
-      <main className="font-mono container mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-12 md:py-16 flex items-center justify-center min-h-[calc(100vh-64px)] sm:min-h-[calc(100vh-72px)] md:min-h-[calc(100vh-80px)]">
-        <div className="text-center w-full max-w-[95%] sm:max-w-xl md:max-w-2xl bg-white/95 backdrop-blur-sm rounded-xl sm:rounded-2xl shadow-2xl p-6 sm:p-8 md:p-10 lg:p-12 border border-slate-200">
-            <div className="mb-6 sm:mb-8">
+      <main className="font-mono w-full px-3 sm:px-6 md:px-8 py-6 sm:py-12 md:py-16 flex items-center justify-center min-h-[calc(100vh-60px)] sm:min-h-[calc(100vh-72px)] md:min-h-[calc(100vh-80px)]">
+        <div className="text-center w-full max-w-full sm:max-w-xl md:max-w-2xl bg-white/95 backdrop-blur-sm rounded-lg sm:rounded-2xl shadow-2xl p-4 sm:p-8 md:p-10 lg:p-12 border border-slate-200">
+            <div className="mb-4 sm:mb-8">
                 <img 
                   src={baseImg} 
                   alt="Mr. Incredible" 
-                  className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 mx-auto rounded-full object-cover ring-4 ring-blue-500/30 shadow-xl mb-4 sm:mb-6"
+                  className="w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 mx-auto rounded-full object-cover ring-4 ring-blue-500/30 shadow-xl mb-3 sm:mb-6"
                 />
-                <h1 className={`${baseImg === final ? "text-lg sm:text-xl md:text-2xl" : "text-xl sm:text-2xl md:text-3xl"} font-bold text-slate-800 mb-2 px-2 break-words`}>
+                <h1 className={`${baseImg === final ? "text-base sm:text-xl md:text-2xl" : "text-lg sm:text-2xl md:text-3xl"} font-bold text-slate-800 mb-2 px-1 break-words`}>
                   {textarea}
                 </h1>
             </div>
           
           {showTextArea && 
-            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 justify-center items-stretch">
+            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center items-stretch w-full">
               <input 
                 type="text" 
                 placeholder="username"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 onKeyPress={handleKeyPress}
-                className="w-full sm:flex-1 px-4 sm:px-6 py-3 sm:py-4 bg-slate-50 border-2 border-slate-200 rounded-lg text-slate-800 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200 text-base sm:text-lg"
+                className="w-full sm:flex-1 px-3 sm:px-6 py-2.5 sm:py-4 bg-slate-50 border-2 border-slate-200 rounded-lg text-slate-800 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200 text-sm sm:text-lg"
                 required
                 aria-label="GitHub username"
               />
               <button 
                 type="submit"
                 disabled={!username.trim()}
-                className="w-full sm:w-auto px-6 py-3 sm:py-4 bg-black hover:bg-gray-900 disabled:bg-gray-400 disabled:cursor-not-allowed cursor-pointer text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105 active:scale-95 flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-4 sm:px-6 py-2.5 sm:py-4 bg-black hover:bg-gray-900 disabled:bg-gray-400 disabled:cursor-not-allowed cursor-pointer text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105 active:scale-95 flex items-center justify-center gap-2 text-sm sm:text-base"
                 aria-label="Submit"
               >
                 <LuSend className="w-4 h-4" />
@@ -122,7 +122,7 @@ const Landing = () => {
                 setTextarea("Enter Your GitHub Username");
                 setUsername("");
               }}
-              className="mt-4 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105"
+              className="mt-3 sm:mt-4 px-4 sm:px-6 py-2.5 sm:py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105 text-sm sm:text-base"
             >
               Try Another
             </button>
