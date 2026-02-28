@@ -8,7 +8,14 @@ const limiter = rateLimit({
     }),
     windowMs: 60 * 1000, // 1 minute
     max: 10,
-    message: "Too many roasts. Calm down 🔥"
+    message: { message: "Too many roasts. Calm down 🔥" },
+    standardHeaders: true,
+    legacyHeaders: false,
+    handler: (req, res) => {
+        res.status(429).json({
+            message: "Too many roasts. Calm down 🔥"
+        });
+    }
 })
 
 export default limiter;

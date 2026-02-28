@@ -41,7 +41,20 @@ const Landing = () => {
         catch(error){
             console.error("Error fetching roast:", error);
             setBaseImg(mrIncredile);
-            setTextarea(error.response?.status === 404 ? "User not found!" : "Something went wrong. Try again!");
+            
+            // Handle different error types
+            if (error.response?.status === 404) {
+                setTextarea("User not found!");
+            } else if (error.response?.status === 429) {
+                // Rate limit error - show the message from backend
+                setTextarea(error.response?.data?.message || error.response?.data || "Too many requests. Please wait!");
+            } else if (error.response?.data?.message) {
+                // Other errors with a message from backend
+                setTextarea(error.response.data.message);
+            } else {
+                setTextarea("Something went wrong. Try again!");
+            }
+            
             setShowTextArea(true);
         }
     }
