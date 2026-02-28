@@ -25,7 +25,7 @@ const Landing = () => {
             setShowTextArea(false);
             setTextarea("Let me laugh first...");
             const apiUrl = import.meta.env.VITE_API_URL;
-            const response = await axios.get(`${apiUrl}/troll/${username}`);
+            const response = await axios.get(`${apiUrl}/api/troll/${username}`);
             if(!response.data.roast){
                 console.log("No roast received");
                 setBaseImg(mrIncredile);
