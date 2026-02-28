@@ -12,9 +12,10 @@ const PORT = process.env.PORT;
 app.use(express.json());
 app.use(
   cors({
-    // multiple origins
-    origin: ["https://mr-incredible.vercel.app", "http://localhost:5173"],
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    origin: ["https://mr-incredible.vercel.app"],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 

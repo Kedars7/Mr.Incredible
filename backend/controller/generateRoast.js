@@ -77,6 +77,11 @@ const generateRoast = async (req, res) => {
       message: "Error fetching data from GitHub API",
       error: error.message,
     });
+    
+    return res.status(500).json({ 
+      error: "Failed to generate roast", 
+      message: error.message 
+    });
   }
 };
 
