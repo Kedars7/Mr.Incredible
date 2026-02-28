@@ -1,9 +1,20 @@
 import pino from "pino";
 
-const logger = pino({
-    transport: {
-        target: "pino-pretty",
-    }
-})
+const isDevelopment = process.env.NODE_ENV !== "production";
+
+const logger = pino(
+  isDevelopment
+    ? {
+        transport: {
+          target: "pino-pretty",
+          options: {
+            colorize: true,
+          },
+        },
+      }
+    : {
+        level: "info",
+      }
+);
 
 export default logger;
